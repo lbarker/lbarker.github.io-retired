@@ -1,0 +1,88 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Footer */
+
+	#footer {
+		.inner {
+		}
+		.description {
+			font-size: 0.8em;
+			color: _palette(fg-lighter);
+			float:left;
+			width:70%;
+			display:inline-block;
+			@include breakpoint(xsmall) {
+				width:100%;
+				text-align: center;
+			}
+		}
+		.icons {
+			text-align:right;
+			float:right;
+			width:30%;
+			margin: 0 0 1em 0;
+			li {
+				text-align: right;
+			}
+			@include breakpoint(xsmall) {
+				width:100%;
+				text-align:center;
+
+			}
+		}
+
+		&.home {
+			background-color: _palette(bg-rgba);
+
+		}
+
+
+
+	}
+
+	#subfooter {
+		background:#000;
+		.inner {
+			padding: 1em 0 .5em!important;
+		}
+		.copyright {
+			font-size: 0.8em;
+			list-style: none;
+			padding-left: 0;
+			margin-bottom:0;
+			li {
+				border-left: solid 1px _palette(border);
+				color: _palette(fg-light);
+				display: inline-block;
+				line-height: 1;
+				margin-left: 1em;
+				padding-left: 1em;
+
+				&:first-child {
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+				}
+				&:last-child {
+					float:right;
+				}
+			}
+
+			@include breakpoint(xsmall) {
+				display: inline-block;
+
+					li {
+						width:100%;
+						text-align: center;
+						border-left: 0;
+						margin-left: 0;
+						padding-left: 0;
+						line-height: inherit;
+					}
+			}
+		}
+	}

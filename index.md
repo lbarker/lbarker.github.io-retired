@@ -6,4 +6,3 @@ image: null
 author: null
 ---
 
-Hello!

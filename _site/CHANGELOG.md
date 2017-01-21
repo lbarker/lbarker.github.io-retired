@@ -1,0 +1,1 @@
+For anyone that's looking, yes I now this not the right way to set up a Jekyll site with every page having it's own template. But this is just a temporary fix from mirgratng my site to GitHub pages!!!! 

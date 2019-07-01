@@ -1,0 +1,90 @@
+
+{% include head.html %}
+<main>
+	<div class="cd-about cd-main-content" >
+		{% if page.next-project-url %}
+		<a class="cd-btn-trigger" href="{{ page.next-project-url}}" data-type="page-transition">   Next 
+			<span class="cd-btn-icon"></span>
+			<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+				<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+			</svg>
+		</a>
+    <span class="cd-btn-trigger-next">next project | {{ page.next-project-title }}</span>  
+    {% else %}   
+      <a class="cd-btn-trigger" href="/" data-type="page-transition">   Next 
+				<span class="cd-btn-icon"></span>
+				<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+					<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+				</svg>
+			</a>
+	    <span class="cd-btn-trigger-next">next | home  </span>         
+    {% endif %}
+		<div class="portfolio-page">
+			<section class="section section-bgimage-yes">
+				<div class="section-inner">
+					<div class="container section-content">
+						<div class="row">
+							<div class="col-md-12">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="section-title text-center">
+											<h3 class="sub-title"><strong>{{ page.title }}</h3>
+											{% if page.liveurl %}
+                      	<a href="{{ page.liveurl }}" class="btn btn-lb">View Live Project</a>
+                      {% endif %}
+                      <div class="clearfix"></div>
+                      <span class="section-line"></span>
+                  	</div>
+	              	</div>
+	         			</div>
+	              <div class="row">
+	                <div class="col-sm-6">
+										<p>
+										  <strong>Client:</strong></br>
+										  {{ page.client }}
+										</p>
+										<p>
+										  <strong>Challenge</strong></br>{{ page.summary }}
+										</p>
+
+										<p>
+										  <strong>Role</strong></br>{{ page.role }}
+										</p>
+										{% if page.teammates %}
+										<p>
+										  <strong>Teammates</strong></br>
+										 
+											{% for teammate in page.teammates %}
+											<a href="{{ teammate.url }}">{{ teammate.name }}</a> - {{ teammate.title }}<br/>
+											{% endfor %}
+										  
+										</p>
+										{% endif %}
+										<p>
+										  <strong>The Stack
+										  </strong></br>{{ page.stack }}
+										</p>
+
+										<p>
+										  <strong>Launched</strong><br/>{{ page.launch-date }}
+										</p>                                               
+									</div>
+									<div class="col-sm-6">
+									  <img src="/assets/images/portfolio/{{ page.thumbnail }}" class="img-thumbnail">
+									</div>
+								</div>
+							</div>
+						<!-- //.section-content -->
+						</div>
+						<!-- //.bcg -->
+					</div>
+					<!-- //.parallax -->
+				</div>
+				<!-- //.section-inner -->
+			</section>
+		</div>
+	</div>
+</main>       
+{% include footer.html %}
+</body>
+</html>
